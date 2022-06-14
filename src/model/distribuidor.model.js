@@ -1,4 +1,4 @@
-import mongoose, { Mongoose } from 'mongoose';
+import mongoose from 'mongoose';
 
 const Schema = new mongoose.Schema({
 	nombre: {
@@ -15,4 +15,4 @@ const Schema = new mongoose.Schema({
 	},
 });
 
-export const DistModel = Mongoose.model('Distribuidor', Schema);
+export const DistModel = mongoose.model('Distribuidor', Schema);
