@@ -41,3 +41,21 @@ export const renderEditDistribuidor = async (req, res) => {
 	const response = await DistModel.find();
 	res.render('pages/distribuidor/editDistribuidor', { response });
 };
+
+export const deleteDistribuidor = async (req, res) => {
+	const { body } = req;
+	await DistModel.deleteOne({ _id: body._id });
+	res.status(200).send(
+		'<script type="text/javascript">alert("Producto agregado");window.location.href = "http://localhost:8080/menu/distribuidor/distribuidor.html";</script>',
+	);
+};
+
+export const renderDeleteDistribuidor = async (req, res) => {
+	const response = await DistModel.find();
+	res.render('pages/distribuidor/deleteDistribuidor', { response });
+};
+
+export const renderReadDistribuidor = async (req, res) => {
+	const response = await DistModel.find();
+	res.render('pages/distribuidor/readDistribuidor', { response });
+};

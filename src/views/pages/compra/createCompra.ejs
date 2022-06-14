@@ -21,32 +21,55 @@
 				</div>
 			</nav>
 		</header>
-		<h2 class="m-3">- C R E A R - D I S T R I B U I D O R -</h2>
+		<h2 class="m-3">- C R E A R - C O M P R A -</h2>
 		<main class="contenido formulario">
-			<form action="/distribuidor/createDistribuidor" method="POST">
+			<form action="/compra/createCompra" method="POST">
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label"
-						>Nombre</label
+						>Fecha</label
 					>
-					<input name="nombre" type="text" class="form-control" />
+					<input
+						name="fecha_compra"
+						type="text"
+						class="form-control"
+					/>
 				</div>
+				<select
+					name="proveedor"
+					class="form-select"
+					aria-label="Default select example"
+				>
+					<option selected>Seleccione el proveedor</option>
+					<% dist.forEach(function(prod){ %>
+					<option value="<%= prod._id%>"><%= prod.nombre %></option>
+					<% }) %>
+				</select>
+				<select
+					name="producto"
+					class="form-select"
+					aria-label="Default select example"
+				>
+					<option selected>Seleccione el producto</option>
+					<% productos.forEach(function(prod){ %>
+					<option value="<%= prod._id%>"><%= prod.nombre %></option>
+					<% }) %>
+				</select>
 				<div class="mb-3">
 					<label for="exampleInputPassword1" class="form-label"
-						>Numero de telefono</label
+						>Total</label
 					>
-					<input name="telefono" type="text" class="form-control" />
-				</div>
-				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label"
-						>Direccion</label
-					>
-					<input name="direccion" type="text" class="form-control" />
+					<input
+						name="total"
+						type="text"
+						class="form-control"
+						id="exampleInputPassword1"
+					/>
 				</div>
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</main>
 		<footer>
-			<a href="../menu/distribuidor/distribuidor.html"> Regresar <-</a>
+			<a href="../menu/compra/compra.html"> Regresar <-</a>
 		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
