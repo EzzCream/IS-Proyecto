@@ -1,0 +1,19 @@
+.container{
+    margin-bottom: 30px;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+table{
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(226, 226, 226);
+}
+th,td{
+    margin: 20px;
+    padding: 20px;
+}

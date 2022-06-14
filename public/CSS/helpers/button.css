@@ -1,0 +1,47 @@
+button {
+    position: relative;
+    display: block;
+    padding: .7em 2em .7em 2em;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+    transition: color 700ms ease;
+    transition-property: color, background-color, transform;
+    cursor: pointer;
+    z-index: 1;
+    margin: auto;
+}
+
+button:hover {
+    color: white;
+}
+
+button:hover:before {
+    width: 100%;
+    height: 100%;
+    top: auto;
+    bottom: 0;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    height: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: black;
+    transition: height 0.3s ease;
+}

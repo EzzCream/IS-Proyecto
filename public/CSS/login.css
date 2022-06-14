@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    margin-top: 80px;
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(226, 226, 226);
+}
+main > .container{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    padding: 10px;
+}
+section[class='formulario']{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+#login{
+    text-align: center;
+    margin: 10px;
+}
